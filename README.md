@@ -17,10 +17,10 @@ Somos un grupo de estudiantes cursando Redes de Computadoras, unidos por la mala
 
 ## Trabajos prácticos
 
-| TP | Estado
-|----|------|
-| TP1 | ✅ Entregado 
-| TP2 | ✅ Entregado 
+| TP | Estado | Link
+|----|------|------|
+| TP1 | ✅ Entregado | https://github.com/Kraisenberg/Ping-Floyd---Redes-de-Computadoras-Repositorio/tree/main/TP%201
+| TP2 | ✅ Entregado | https://github.com/Kraisenberg/Ping-Floyd---Redes-de-Computadoras-Repositorio/tree/main/TP%202%20
 | TP3 | ⏳ Sin empezar
 
 **Leyenda:** ✅ Entregado · 🔧 En progreso · ⏳ Sin empezar
