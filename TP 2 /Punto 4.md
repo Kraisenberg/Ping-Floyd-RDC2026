@@ -1,4 +1,13 @@
-4)
+# 4) Vamos ahora a discutir e investigar cómo podemos empezar a interpretar la información una vez decodificada:
+   
+   a) ¿Qué significa sincronización en una comunicación digital? Investigar la diferencia entre sincronización de bits y sincronización de trama.
+
+   b) ¿Qué es una trama (frame)? ¿Qué diferencias existen entre el encabezado (header), la carga útil (payload) y el tráiler (trailer)?
+   
+   c) ¿Qué función puede cumplir un preámbulo antes de una trama? ¿Es necesariamente parte de la información que se quiere transmitir?
+   
+   d) Investigar al menos tres formas mediante las cuales un protocolo puede determinar dónde termina una trama: longitud fija, un campo que indique la longitud y caracteres/secuencias delimitadoras.
+   
 ---
 a)
 
