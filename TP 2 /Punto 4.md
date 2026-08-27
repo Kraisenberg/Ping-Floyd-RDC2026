@@ -1,4 +1,5 @@
 4)
+---
 a)
 
 Sincronización digital: 
@@ -9,6 +10,7 @@ La sincronización digital es el mecanismo que le permite al receptor saber en q
 
 - Sincronización de trama: Acá una vez que el receptor está leyendo los bits correctamente, necesita también saber dónde arranca y dónde termina cada bloque (la trama) dentro de ese flujo continuo de bits. 
 
+---
 
 b) 
 
@@ -21,14 +23,14 @@ La carga útil es el bloque que contiene toda la información real que se necesi
 
 El trailer son todos los campos de control luego de la carga útil. Estos están diseñados para garantizar la integridad física de la comunicación.
 
-
+---
 
 c)
 
 Un preámbulo sirve principalmente para sincronizar el receptor con el emisor antes de que comience la transmisión de los datos reales. Es una secuencia de bits conocida (patrón fijo, por ejemplo 10101010...) que se envía antes de la “trama” para que el receptor sincronice su reloj con el del transmisor y detecte el inicio de la transmisión. 
 No es parte de la información útil que se quiere transmitir, es una sincronización, se considera una extra de bits(overhead) necesarios para el control de la comunicación, se descarta una vez cumplida su función.
 
-
+---
 
 d)
 
