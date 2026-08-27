@@ -21,6 +21,7 @@ Somos un grupo de estudiantes cursando Redes de Computadoras, unidos por la mala
 |----|------|
 | TP1 | ✅ Entregado 
 | TP2 | 🔧 En progreso
+| TP3 | ⏳ Sin empezar
 
 **Leyenda:** ✅ Entregado · 🔧 En progreso · ⏳ Sin empezar
 
