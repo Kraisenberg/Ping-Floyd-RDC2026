@@ -25,6 +25,8 @@ Los campos mas importantes en un frame TCP son:
   
 El Three-Way y Four-Way handshake son los mecanismos que TCP usa para establecer la conexion y el cierre entre cliente y servidor respectivamente.
 
+<div> <br> </div>
+
 El **Three-Way Handshake** realiza tres pasos para establecer la conexion entre el cliente y el servidor. Esto es asi porque un proceso de dos pasos no seria tan fiable y podrian establecerse conexiones por error.
 Los pasos son los siguientes:
 
