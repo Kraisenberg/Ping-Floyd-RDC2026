@@ -1,6 +1,6 @@
 # Comunicación con servidor en la nube #
 
-Utilizamos una nueva instancia de PacketSender y configuramos todo para establecer una comunicacion con el servidor en la nube
+Utilizamos una nueva instancia de PacketSender y configuramos todo para establecer una comunicación con el servidor en la nube
 
 <img width="904" height="561" alt="6" src="https://github.com/user-attachments/assets/b44249e0-48d3-47d5-af3e-645c4af825f6" />
 <div align="center"> <em> Configuramos PacketSender y enviamos el primer mensaje </em> </div>
@@ -18,6 +18,6 @@ Utilizamos una nueva instancia de PacketSender y configuramos todo para establec
 
 <div> <br> </div>
 
-Aca como se puede observar, enviamos distintos comandos al servidor y su respuesta para probar la correcta comunicacion con el servidor, ademas se observa la captura de todos los paquetes de datos entre la pc y el servidor.  
-Luego, por ultimo ejecutamos el comando del nombre del grupo para obtener la respuesta del servidor y poder extraer el numero de secuencia y el Payload.
+Acá como se puede observar, enviamos distintos comandos al servidor y su respuesta para probar la correcta comunicación con el servidor. Además, se observa la captura de todos los paquetes de datos entre la pc y el servidor.  
+Luego, por último, ejecutamos el comando del nombre del grupo para obtener la respuesta del servidor y poder extraer el número de secuencia y el Payload.
 
