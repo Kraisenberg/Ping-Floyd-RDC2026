@@ -30,7 +30,7 @@ La IP de destino es **157.90.91.74**
 
 No, direcciones IP y direcciones MAC no representan lo mismo.
 
-Las direcciones MAC representan los dispositivos que se envian el paquete de datos dentro de la red LAN, mientras que las direcciones IP, una marca el dispositivo dentro de mi red donde se origino y la otra marca el destino final dentro de internet del paquete.
+Las direcciones MAC representan los dispositivos que se envian el paquete de datos dentro de la red LAN; mientras que las direcciones IP, una marca el dispositivo dentro de mi red donde se originó y la otra marca el destino final dentro de internet del paquete.
 
 <div> <br> </div>
 
