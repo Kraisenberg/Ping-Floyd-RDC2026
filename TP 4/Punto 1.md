@@ -4,8 +4,8 @@
 
 Las redes se clasifican según su alcance o área geográfica:  
  
-PAN(Personal Area Network): Red de área/cobertura personal (pocos metros)  que conecta dispositivos cercanos como teléfonos, auriculares o computadoras. Su alcance suele ser de 10 m. 
-LAN(Local Area Network): Red de alcance local que interconecta o cubre equipos en un área reducida, como una oficina, casa o un aula de clases. Ofrece altas velocidades de transmisión y baja latencia. 
+PAN(Personal Area Network): Red de área/cobertura personal (pocos metros)  que conecta dispositivos cercanos como teléfonos, auriculares o computadoras. Su alcance suele ser de 10 m.   
+LAN(Local Area Network): Red de alcance local que interconecta o cubre equipos en un área reducida, como una oficina, casa o un aula de clases. Ofrece altas velocidades de transmisión y baja latencia.   
 CAN (Campus Area Network ): Interconecta múltiples redes LAN dentro de un área geográfica delimitada como un campus universitario o complejo corporativo.  
 MAN(Metropolitan Área Network): Red de alta velocidad que da cobertura a una zona metropolitana, interconectando diversas redes LAN. Utilizada por proveedores de servicios o gobiernos locales para interconectar sedes urbanas.   
 WAN(Wide Area Network): Interconecta redes a gran escala geográfica mediante el uso de enlaces satelitales, cables submarinos o fibra óptica de larga distancia. El ejemplo más claro de una red WAN es el Internet.  
