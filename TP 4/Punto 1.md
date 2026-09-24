@@ -1,7 +1,6 @@
-#Alcance de Redes y Virtualización#
+# Alcance de Redes y Virtualización #
 
-##Investigar cómo se clasifican las redes según su alcance. Mencionar brevemente las características
-principales de cada una y colocar en cada cuadro de la Figura el acrónimo de red que corresponda.##
+## Investigar cómo se clasifican las redes según su alcance. Mencionar brevemente las características principales de cada una y colocar en cada cuadro de la Figura el acrónimo de red que corresponda. ##
 
 Las redes se clasifican según su alcance o área geográfica:
 
@@ -12,7 +11,7 @@ MAN(Metropolitan Área Network): Red de alta velocidad que da cobertura a una zo
 WAN(Wide Area Network): Interconecta redes a gran escala geográfica mediante el uso de enlaces satelitales, cables submarinos o fibra óptica de larga distancia. El ejemplo más claro de una red WAN es el Internet. 
 
 
-##¿Qué es una vLAN? ¿Cómo se clasifican?##
+## ¿Qué es una vLAN? ¿Cómo se clasifican? ##
 
 Una VLAN (Virtual Local Area Network) o red de área local virtual, es una tecnología de red que nos permite crear redes lógicas independientes dentro de la misma red física, osea, es como dividir nuestra red en redes más pequeñas, “fingimos” mediante software y firmware que existen más de una red local dentro de un mismo SW. Permite agrupar dispositivos de forma lógica sin importar su ubicación física, mejorando la seguridad, el rendimiento y la administración del tráfico.
 Se clasifican principalmente en:
