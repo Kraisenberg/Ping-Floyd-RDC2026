@@ -1,6 +1,6 @@
+<img width="1439" height="852" alt="Estructura" src="https://github.com/user-attachments/assets/ec85c357-22dd-41e9-937b-cc3debe7c2c9" />
 <img width="488" height="248" alt="config 2" src="https://github.com/user-attachments/assets/5b79ffa5-d8f6-44de-8886-de88b8ab98d8" />
 <img width="509" height="269" alt="nuevo ping" src="https://github.com/user-attachments/assets/2e3f70d3-72ca-42da-b2dd-7635d856c9e7" />
-<img width="1439" height="852" alt="Estructura" src="https://github.com/user-attachments/assets/ec85c357-22dd-41e9-937b-cc3debe7c2c9" />
 <img width="591" height="375" alt="Fastethernet antes" src="https://github.com/user-attachments/assets/27f30314-fbb7-4f36-971d-8dcfe8898362" />
 <img width="586" height="417" alt="Fastethernet despues" src="https://github.com/user-attachments/assets/a5a15da2-eec1-429a-ad77-f2328d812813" />
 <img width="466" height="266" alt="Ping" src="https://github.com/user-attachments/assets/176472e7-541b-4a24-a8cd-900571955541" />
