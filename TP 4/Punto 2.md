@@ -40,11 +40,13 @@
 <!-- FOTO NUMERO 4 -->
 
 
+
 <!-- FOTO NUMERO 5 -->
 <div> <br> </div>
 <div align="center"><img width="481" height="210" alt="Conf vlan" src="https://github.com/user-attachments/assets/6f88b4a7-3d1c-4721-829e-dbcdfffb162e" /></div>
 <div> <br> </div>
 <!-- FOTO NUMERO 5 -->
+
 
 
 <!-- FOTO NUMERO 6 -->
@@ -54,88 +56,28 @@
 <!-- FOTO NUMERO 6 -->
 
 
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
 
+<!-- FOTO NUMERO 7 -->
 <div> <br> </div>
+<div align="center"><img width="672" height="644" alt="Nueva configuracion de vlan" src="https://github.com/user-attachments/assets/3c9abd71-631a-490e-a715-ef933f9fb214" /></div>
+<div align="center"> <em> Configuracion final Switch 1 </em> </div>  
 <div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-Esta imagen es del ping fallado cuando se pierde la conexion
-<div> <br> </div>
-<img width="509" height="269" alt="nuevo ping" src="https://github.com/user-attachments/assets/2e3f70d3-72ca-42da-b2dd-7635d856c9e7" />
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-Esta imagen es de la creacion de las vlan del punto h
-<div> <br> </div>
-
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
+<!-- FOTO NUMERO 7 -->
 
 
 
+<!-- FOTO NUMERO 8 -->
+<div> <br> </div>
+<div align="center"><img width="602" height="652" alt="Nueva configuracion de vlan 2" src="https://github.com/user-attachments/assets/c92f3ffa-0eb7-4787-9bfc-85f67a38a05a" /></div>
+<div align="center"> <em> Configuracion final Switch 2 </em> </div>  
+<div> <br> </div>
+<!-- FOTO NUMERO 8 -->
 
 
 
-
-
-
-
-
-
-
-<img width="672" height="644" alt="Nueva configuracion de vlan" src="https://github.com/user-attachments/assets/3c9abd71-631a-490e-a715-ef933f9fb214" />
-<img width="602" height="652" alt="Nueva configuracion de vlan 2" src="https://github.com/user-attachments/assets/c92f3ffa-0eb7-4787-9bfc-85f67a38a05a" />
-# Contenido punto 2
-
--completar
+<!-- FOTO NUMERO 9 -->
+<div> <br> </div>
+<div align="center"><img width="509" height="269" alt="nuevo ping" src="https://github.com/user-attachments/assets/2e3f70d3-72ca-42da-b2dd-7635d856c9e7" /></div>
+<div align="center"> <em> Intento de comunicación entre ambas computadoras </em> </div>  
+<div> <br> </div>
+<!-- FOTO NUMERO 9 -->
