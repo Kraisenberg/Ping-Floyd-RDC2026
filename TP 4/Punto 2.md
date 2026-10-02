@@ -34,6 +34,7 @@ Luego observamos cuales son las interfaces que existen y están habilitadas, par
 <div> <br> </div>
 <!-- FOTO NUMERO 3 -->
 
+Al terminar todas las configuraciones testeamos la conexión entre las computadoras a través de pings para verificar que estén correctamente comunicadas.
 
 
 <!-- FOTO NUMERO 4 -->
@@ -43,7 +44,7 @@ Luego observamos cuales son las interfaces que existen y están habilitadas, par
 <div> <br> </div>
 <!-- FOTO NUMERO 4 -->
 
-
+Ahora nos centramos en la creacion de las VLANs en los switches mediante la consola
 
 <!-- FOTO NUMERO 5 -->
 <div> <br> </div>
