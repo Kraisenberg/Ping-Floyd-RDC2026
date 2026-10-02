@@ -2,13 +2,14 @@
 # Implementacion de Topologia en Packet-Tracer # 
 <!-- Titulo -->
 
-
+Lo primero que realizamos fue la topología solicitada en el trabajo practico en el software Packet-Tracer mediante los dispositivos ofrecidos en el mismo y con sus correspondientes conexiones.
 
 <!-- FOTO NUMERO 1 -->
 <div align="center"> <img width="1439" height="852" alt="Estructura" src="https://github.com/user-attachments/assets/ec85c357-22dd-41e9-937b-cc3debe7c2c9" /> </div>  
 <div> <br> </div>
 <!-- FOTO NUMERO 1 -->
 
+Luego de esto, a través de la conexión de consola entre cada PC y su switch correspondiente realizamos la configuración de los mismos, cambiando su nombre y añadiendo contraseñas de acceso.
 
 
 <!-- FOTO NUMERO 2 -->
@@ -18,6 +19,9 @@
 <div> <br> </div>
 <!-- FOTO NUMERO 2 -->
 
+Una vez hecho esto, seguimos con la configuración de las redes VLAN de los switches con las especificaciones que están en la tabla.
+
+Luego observamos cuales son las interfaces que existen y están habilitadas, para luego desconectarlas y dejar únicamente activas las interfaces utilizadas en nuestro esquema.
 
 
 <!-- FOTO NUMERO 3 -->
