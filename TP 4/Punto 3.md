@@ -1,7 +1,3 @@
-<!--<div align="center"> </div>-->
-<!--<div> <br> </div>-->
-<!--<div align="center"> <em> Comandos enviados para la configuracion del Switch 2 </em> </div>  -->
-<!-- Titulo -->
 # Implementacion de red LAN en aeronave #
 
 Para empezar a implementar la red LAN, armamos un esquema de red tal como nos sugiere el informe en Packet-Tracer
@@ -34,7 +30,7 @@ Luego de realizar todo el esquema físico de nuestra red con sus conexiones corr
 ## Empezamos con los testeos desde las distintas clases ##
 
 ### Clase Turista ###
-<div> <br> </div>
+
 Ping desde clase Turista al servidor de entretenimiento local (**10.10.99.10**) y al router del ISP (**200.0.0.2**)
 <!-- Foto numero 4 -->
 <div> <br> </div>
@@ -53,12 +49,12 @@ Ping desde clase Turista al servidor de entretenimiento local (**10.10.99.10**) 
 Como se observa, desde la clase **Turista** se puede acceder correctamente al servidor de entretenimiento local pero no tiene acceso a internet
 
 <div> <br> </div>
+<div> <br> </div>
 
 
 ### Clase Business ###
 
-<div> <br> </div>
-Ping desde clase Business al router del ISP ( 200.0.0.2 ) y acceso HTTPS al servidor
+Ping desde clase Business al router del ISP **200.0.0.2** y acceso HTTPS al servidor
 <div> <br> </div>
 <div align="center"><img width="435" height="295" alt="ping business " src="https://github.com/user-attachments/assets/d398235f-6d04-46ef-9bc6-3189daf855d9" /></div>
 <div align="center"> <em> Ping a internet </em> </div>
@@ -72,88 +68,16 @@ Como se observa, desde la clase **Business** se puede acceder correctamente al s
 
 <div> <br> </div>
 <div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
 
+### Clase Admin ###
 
-
+Pings realizados desde la clase Admin hacia todos los puntos importantes de la estructura para verificar que se tiene acceso absoluto
 
 <div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
+<div align="center"><img width="464" height="997" alt="Ping admin" src="https://github.com/user-attachments/assets/c52a251f-c5ce-4e78-b2fc-9dbcfca93bec" /></div>
+<div align="center"> <em> Todos los pings realizados desde Admin </em> </div>
 <div> <br> </div>
 
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-Ping a todos desde admin
-<img width="464" height="997" alt="Ping admin" src="https://github.com/user-attachments/assets/c52a251f-c5ce-4e78-b2fc-9dbcfca93bec" />
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-Conexion a servidor de entretenimiento desde clase turista
-
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-<div> <br> </div>
-esta en stand by
-<img width="422" height="212" alt="Ping clase turista servidor" src="https://github.com/user-attachments/assets/a51a7429-abab-4438-a195-394e0c1515b0" />
-
-<div> <br> </div>
-
+Como se puede observar en la imagen, todos los pings dentro de la estructura del avion se realizaron correctamente por lo que se verifica que desde Admin podemos tener acceso a todos los dispositivos de la estructura, sin embargo el ping hacia internet falla ya que la configuracion del router del avion solo admite las IPs de la clase business.
 
 
