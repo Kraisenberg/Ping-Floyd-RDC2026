@@ -34,7 +34,7 @@ Luego de realizar todo el esquema físico de nuestra red con sus conexiones corr
 ## Empezamos con los testeos desde las distintas clases ##
 
 ### Clase Turista ###
-
+<div> <br> </div>
 Ping desde clase Turista al servidor de entretenimiento local (**10.10.99.10**) y al router del ISP (**200.0.0.2**)
 <!-- Foto numero 4 -->
 <div> <br> </div>
@@ -58,7 +58,7 @@ Como se observa, desde la clase **Turista** se puede acceder correctamente al se
 ### Clase Business ###
 
 <div> <br> </div>
-Ping desde clase Business al servidor de entretenimiento local (**10.10.99.10**) y al router del ISP (**200.0.0.2**)
+Ping desde clase Business al router del ISP ( 200.0.0.2 ) y acceso HTTPS al servidor
 <div> <br> </div>
 <div align="center"><img width="435" height="295" alt="ping business " src="https://github.com/user-attachments/assets/d398235f-6d04-46ef-9bc6-3189daf855d9" /></div>
 <div align="center"> <em> Ping a internet </em> </div>
@@ -67,6 +67,8 @@ Ping desde clase Business al servidor de entretenimiento local (**10.10.99.10**)
 <div align="center"> <em> Ingreso HTTP al servidor </em> </div>
 <div> <br> </div>
 
+Como se observa, desde la clase **Business** se puede acceder correctamente al servidor de entretenimiento local y tambien tiene acceso a internet
+
 
 <div> <br> </div>
 <div> <br> </div>
@@ -74,7 +76,7 @@ Ping desde clase Business al servidor de entretenimiento local (**10.10.99.10**)
 <div> <br> </div>
 <div> <br> </div>
 <div> <br> </div>
-ping desde clase turista a servidor local y a internet
+
 
 
 
