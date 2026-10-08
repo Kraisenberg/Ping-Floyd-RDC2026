@@ -45,7 +45,7 @@ Ping desde clase Turista al servidor de entretenimiento local (**10.10.99.10**) 
 
 <!-- Foto numero 5 -->
 <div> <br> </div>
-<div align="center"><img width="1071" height="665" alt="Server entretenimiento turista" src="https://github.com/user-attachments/assets/b3c9b0e9-4a41-464c-8b9b-caeda9750993" /></div>
+<div align="center"><img width="918" height="570" alt="Server entretenimiento turista" src="https://github.com/user-attachments/assets/b3c9b0e9-4a41-464c-8b9b-caeda9750993" /></div>
 <div align="center"> <em> Ingreso HTTP al servidor </em> </div>
 <div> <br> </div>
 <!-- Foto numero 5 -->
@@ -58,13 +58,16 @@ Como se observa, desde la clase **Turista** se puede acceder correctamente al se
 ### Clase Business ###
 
 <div> <br> </div>
-Ping a internet desde clase business
-<img width="435" height="295" alt="ping business " src="https://github.com/user-attachments/assets/d398235f-6d04-46ef-9bc6-3189daf855d9" />
+Ping desde clase Business al servidor de entretenimiento local (**10.10.99.10**) y al router del ISP (**200.0.0.2**)
 <div> <br> </div>
-conexion con server entretenimiento desde clase business
-<img width="662" height="341" alt="Server entretenimiento Business" src="https://github.com/user-attachments/assets/fcf209d3-97ff-4d64-abe6-d6ceec7c1b89" />
+<div align="center"><img width="435" height="295" alt="ping business " src="https://github.com/user-attachments/assets/d398235f-6d04-46ef-9bc6-3189daf855d9" /></div>
+<div align="center"> <em> Ping a internet </em> </div>
+<div> <br> </div>
+<div align="center"><img width="662" height="341" alt="Server entretenimiento Business" src="https://github.com/user-attachments/assets/fcf209d3-97ff-4d64-abe6-d6ceec7c1b89" /></div>
+<div align="center"> <em> Ingreso HTTP al servidor </em> </div>
+<div> <br> </div>
 
-<div> <br> </div>
+
 <div> <br> </div>
 <div> <br> </div>
 <div> <br> </div>
