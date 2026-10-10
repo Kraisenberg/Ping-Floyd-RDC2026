@@ -1,1 +1,1 @@
-Internet Control Message Protocolcontenido del punto 1 aqui
+1-. Internet Control Message Protocol básicamente es un protocolo de capa de red, está diseñado para control, diagnóstico de errores entre un router o varios y un host o varios. No transporta dato de aplicaciones y tampoco interactúa con aplicaciones de usuario ni usa puertos.  
