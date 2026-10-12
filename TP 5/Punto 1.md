@@ -8,3 +8,5 @@ Lo que hace Echo Request es enviar un mensaje en el que solicito una respuesta, 
 Los campos que utiliza ICMP para distinguir los mensajes son 'type' y 'code'. Por ejemplo la computadora recibe un paquete dirigido a su IP, entonces mira su campo 'protocol' le llegó 1; entonces identifica que es ICMP.
 Luego ICMP mira su campo 'type' y 'code' y en base a eso sabe si es un 'echo request' (type 8 code 0) o un 'echo reply' (type 0 code 0 )
 
+1d-. La información que contiene mínima es un encabezado ICMP de 8 bytes y un campo de datos.
+
