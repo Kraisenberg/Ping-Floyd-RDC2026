@@ -14,7 +14,7 @@ Luego, usando el comando “curl”, se procede a descargar el archivo “pdf-1.
 
 <img width="808" height="92" alt="image6" src="https://github.com/user-attachments/assets/701dc992-1d12-4420-b471-9c13d2d1af23" />
 
-En la terminal del servidor, podemos comprobar que este recibe las peticiones y entrega correctamente los archivos, respondiendo con códigos de estado HTTP 200 OK (y 304 para los archivos.
+En la terminal del servidor, podemos comprobar que este recibe las peticiones y entrega correctamente los archivos, respondiendo con códigos de estado HTTP 200 OK (y 304 para los archivos cacheados).
 
 <img width="931" height="127" alt="image7" src="https://github.com/user-attachments/assets/dcc81527-0099-41a7-a716-1f3e7b6f07aa" />
 Capturando el trafico desde Wireshark, obtenemos:
