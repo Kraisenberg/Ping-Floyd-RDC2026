@@ -1,4 +1,4 @@
-**Punto 3\)**
+## Punto 3)
 
 Para este punto se creó, desde la computadora 1, el siguiente directorio:
 
