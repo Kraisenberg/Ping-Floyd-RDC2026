@@ -1,4 +1,4 @@
-Punto 1)
+## Punto 1)
 
 Pasos para crimpar un cable bajo la norma T568A/B DERECHO:
 
