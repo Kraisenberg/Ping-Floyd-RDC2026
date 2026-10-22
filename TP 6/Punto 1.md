@@ -1,3 +1,16 @@
+Punto 1)
+
+Pasos para crimpar un cable bajo la norma T568A/B DERECHO:
+
+Cortar un metro de cable UTP y pelar puntas de los cables internos
+Ordenar los cables según el orden correspondiente para lograr una dirección derecha
+Colocar los cables dentro de la ficha RJ45, chequeando que el orden se mantiene
+Comprobar que los cables estén correctamente colocados
+Apretar el RJ45 con la crimpadora
+Repetir para el otro extremo
+Verificar la conexión la construcción 
+
+
 Construímos un cable bajo la norma T568A/B DERECHO. 
 <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/cbcca141-de51-4998-b82a-244ff089cfa1" />
 
