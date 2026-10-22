@@ -18,3 +18,6 @@ La elección tuvo sentido para la actividad ya que cuando configuramos ambas com
 
 
 Desde la computadora 2, enviamos un mensaje al receptor:
+
+<img width="844" height="128" alt="Screenshot From 2026-10-15 20-40-41" src="https://github.com/user-attachments/assets/0f93486e-fd6b-46b1-8041-e23260d0ceff" />
+
