@@ -24,7 +24,7 @@ Somos un grupo de estudiantes cursando Redes de Computadoras, unidos por la mala
 | TP3 | ✅ Entregado |  [TP3](https://github.com/Kraisenberg/Ping-Floyd-RDC2026/tree/main/TP%203)
 | TP4 | ✅ Entregado | [TP4](https://github.com/Kraisenberg/Ping-Floyd-RDC2026/tree/main/TP%204) 
 | TP5 | 🔧 En progreso | [TP5](https://github.com/Kraisenberg/Ping-Floyd-RDC2026/tree/main/TP%205)
-| TP6 | 🔧 En progreso |
+| TP6 | 🔧 En progreso | [TP6](https://github.com/Kraisenberg/Ping-Floyd-RDC2026/tree/main/TP%206)
 
 **Leyenda:** ✅ Entregado · 🔧 En progreso · ⏳ Sin empezar
 
