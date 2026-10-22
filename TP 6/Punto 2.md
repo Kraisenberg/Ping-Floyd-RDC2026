@@ -19,11 +19,13 @@ Luego, utilizando “ncat”, establecemos un receptor UDP desde la computadora 
 
 <img width="562" height="173" alt="image4" src="https://github.com/user-attachments/assets/146bd2b9-405c-407b-b3f4-3d19ce10aec8" />
 
-Finalmente, capturamos los siguientes paquetes:
-
-
 
 Desde la computadora 2, enviamos un mensaje al receptor:
 
 <img width="844" height="128" alt="Screenshot From 2026-10-15 20-40-41" src="https://github.com/user-attachments/assets/0f93486e-fd6b-46b1-8041-e23260d0ceff" />
+
+Finalmente, capturamos los siguientes paquetes:
+
+<img width="1600" height="900" alt="image5" src="https://github.com/user-attachments/assets/258db9e8-d02e-4e3b-bc4c-57f26d65451c" />
+
 
