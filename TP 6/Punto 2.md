@@ -15,3 +15,6 @@ Default Gateway
 
 La elección tuvo sentido para la actividad ya que cuando configuramos ambas computadoras en la misma red hizo que puedan comunicarse a través del switch, utilizando mensajes HTTP y UDP sin necesidad de un router que tenga que estar enrutando tráfico entre las distintas redes. El default gateway no fue relevante en este trabajo práctico porque el tráfico que se generaba era de manera local.
 
+
+
+Desde la computadora 2, enviamos un mensaje al receptor:
