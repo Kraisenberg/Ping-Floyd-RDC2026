@@ -29,3 +29,18 @@ Finalmente, capturamos los siguientes paquetes:
 <img width="1600" height="900" alt="image5" src="https://github.com/user-attachments/assets/258db9e8-d02e-4e3b-bc4c-57f26d65451c" />
 
 
+5) ¿Se observa algún procedimiento de establecimiento de conexión antes de enviar los datos?
+No se observa ningún tipo de procedimiento para establecer conexión antes de enviar datos. En este protocolo, el emisor envía los paquetes de datos directamente, sin antes establecer un handshake.	
+
+¿Existe algún mecanismo de confirmación de recepción equivalente a los ACK de TCP?
+El protocolo UDP no tiene un mecanismo de confirmación de recepción equivalente a los ACK de TCP.
+Esto se debe a que el protocolo está diseñado para ser simple y rápido, sacrificando la confiabilidad en la transmisión, por lo que no tiene confirmación de recepción.
+
+¿Qué ocurre si se envían mensajes mientras el receptor UDP no está ejecutándose?
+Los mensajes se pierden sin que el emisor se entere de forma directa, lo que sucedería es que los datagrama llegan al host destino, pero como no hay ningún proceso escuchando en ese puerto UPD se descarta los datagramas, acto seguido el receptor  responde con un mensaje ICMP “Destination Unreachable - Port Unreachable”
+
+¿UDP garantiza que los mensajes lleguen en el mismo orden en que fueron enviados?
+UDP no garantiza que los paquetes lleguen en orden, ya que en su cabecera no se incluye un número de secuencia que indique el orden en que deben ser reconstruidos los paquetes recibidos. Si una aplicación requiere los paquetes ordenados y aún así utilizar UDP, el ordenamiento y el chequeo de errores deben ser realizados en la capa de aplicación.
+
+¿Qué aplicaciones reales utilizan UDP y por qué?
+UDP tiene sus aplicaciones reales en el uso de videollamadas o llamadas, streaming, juegos online, DNS y QUIC/HTTP entre otras opciones. esto porque UDP se utiliza cuando la velocidad y la baja latencia importan más que la fiabilidad o cuando la aplicación prefiere manejar ella misma los errores. 
