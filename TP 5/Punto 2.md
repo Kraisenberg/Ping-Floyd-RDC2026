@@ -8,10 +8,16 @@ b) ARP Request (Consulta ARP): Consulta que hace el paquete ARP a todos los host
 
    ARP Reply (Respuesta ARP): Los módulos ARP realizan una comprobación para ver si su dirección IP se corresponde con la dirección IP de destino del paquete ARP. El único nodo en el que se produzca una coincidencia devolverá al nodo que ha realizado la consulta una respuesta ARP con la correspondencia deseada.  
 
+c) La caché ARP es una tabla o memoria temporal IP → MAC que cada host guarda. Guarda la correspondencia entre direcciones IP (Capa 3) y sus respectivas direcciones MAC (Capa 2) aprendidas en la red local.
+Existe para no preguntar antes de cada paquete, ósea, evita que el emisor tenga que enviar una consulta en broadcast a toda la red y también reduce la latencia, ya que permite que los dispositivos se comuniquen de forma instantánea sin perder tiempo en consultas repetitivas de red.
 
-e) <img width="530" height="125" alt="image7" src="https://github.com/user-attachments/assets/5b47fa5e-18ef-4181-9c01-b3dde2239a01" />
+e) 
+<img width="530" height="125" alt="image7" src="https://github.com/user-attachments/assets/5b47fa5e-18ef-4181-9c01-b3dde2239a01" />
 
-f) <img width="783" height="221" alt="image39" src="https://github.com/user-attachments/assets/808a22e2-ddbd-42d7-bb95-a550eb0b32ea" />
+Sí, coincide. La caché ARP asocia 192.168.0.1 con c4-e9-84-7c-93-d6, y esa misma MAC es la MAC destino del Echo Request enviado al gateway (frame 3791).
+
+f) 
+<img width="783" height="221" alt="image39" src="https://github.com/user-attachments/assets/808a22e2-ddbd-42d7-bb95-a550eb0b32ea" />
 
 <img width="821" height="35" alt="image22" src="https://github.com/user-attachments/assets/a3a709e0-3407-4fc4-bb7a-8c05b0fcd61b" />
 
@@ -30,7 +36,14 @@ f) <img width="783" height="221" alt="image39" src="https://github.com/user-atta
 | MAC origen (encabezado Ethernet) | ec:2e:98:2d:5e:11 | c4:e9:84:7c:93:d6 |
 | Opcode | request (1) | reply (2) |
 | Sender MAC address  | ec:2e:98:2d:5e:11 | c4:e9:84:7c:93:d6 |
-| Sender IP address | 192.168.0.101  | 192:168.0.1 |
+| Sender IP address | 192.168.0.101  | 192.168.0.1 |
 | Target MAC address  | 00:00:00:00:00:00  | ec:2e:98:2d:5e:11 |
-| Target IP address  | 192.168.0.1  | 192:168.0.101 |
+| Target IP address  | 192.168.0.1  | 192.168.0.101 |
 
+
+a) El ARP Request va a la dirección de broadcast ff:ff:ff:ff:ff:ff porque el emisor (192.168.0.101) conoce la IP del equipo que busca (192.168.0.1) pero no su MAC. Como no sabe a quién enviarlo, lo manda a todos los equipos de la red local, y solo el dueño de esa IP responde. El Reply, en cambio, va por unicast directo a ec:2e:98:2d:5e:11, porque el Request ya incluía la MAC del solicitante en el campo Sender MAC, así que el que responde sabe a quién contestar.   
+En el Request, Target MAC vale 00:00:00:00:00:00, porque es justamente el dato que se está preguntando: todavía no se conoce, así que se deja en ceros como marcador.  
+     
+b) El campo Type de Ethernet II vale 0x0806, que identifica al protocolo ARP. No hay encabezado IP: en el panel de Wireshark solo aparecen Frame, Ethernet II y Address Resolution Protocol. Esto indica que ARP "vive" pegado a la capa de enlace: viaja directamente dentro de la trama Ethernet, sin usar IP, por lo que solo funciona dentro de la red local. No puede cruzar un router, porque los routers trabajan con IP y no reenvían broadcasts.   
+     
+c) Aparecieron 6 ARP Request (Who has 192.168.0.253? Tell 192.168.0.101), enviados aproximadamente uno por segundo. No hubo ningún Reply, porque no existe ningún equipo con esa IP. No apareció ningún ICMP Echo Request: para enviarlo hay que armar una trama Ethernet con la MAC destino, y como nadie respondió el ARP, esa MAC nunca se obtuvo. Sin MAC destino el paquete IP no se puede encapsular, así que el ping nunca llegó a salir de la computadora y falló con "host de destino inaccesible".  
