@@ -11,5 +11,5 @@ Paquetes capturados en Wireshark
 <img width="1108" height="206" alt="image28" src="https://github.com/user-attachments/assets/14602580-cb80-45e9-8c6f-41a8f4a6b9af" />
 
 
-La tabla queda conformada de la siguiente mansaera
+La tabla queda conformada de la siguiente manera
 <img width="784" height="343" alt="image" src="https://github.com/user-attachments/assets/66d168b9-f239-4a10-b846-55e6a8fcae8a" />
