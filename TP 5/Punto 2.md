@@ -14,28 +14,35 @@ Existe para no preguntar antes de cada paquete, ósea, evita que el emisor tenga
 e) 
 
 Terminal, tabla de cache ARP
+
 <img width="530" height="125" alt="image7" src="https://github.com/user-attachments/assets/5b47fa5e-18ef-4181-9c01-b3dde2239a01" />
 
 Sí, coincide. La caché ARP asocia 192.168.0.1 con c4-e9-84-7c-93-d6, y esa misma MAC es la MAC destino del Echo Request enviado al gateway (frame 3791).
 
 f)
 
-Realizamos un ping
+Realizamos un ping 
+
 <img width="783" height="221" alt="image39" src="https://github.com/user-attachments/assets/808a22e2-ddbd-42d7-bb95-a550eb0b32ea" />
 
 Wireshark, capturamos ARP
+
 <img width="821" height="35" alt="image22" src="https://github.com/user-attachments/assets/a3a709e0-3407-4fc4-bb7a-8c05b0fcd61b" />
 
-Detalle del Request, destino broadcast
+Detalle del Request, destino broadcast  
+
 <img width="664" height="349" alt="image6" src="https://github.com/user-attachments/assets/a4bc6c22-abba-4e02-97b9-0a3cc35f3a9d" />
 
-Detalle del Reply, respuesta unicast
+Detalle del Reply, respuesta unicast  
+
 <img width="664" height="348" alt="image13" src="https://github.com/user-attachments/assets/ea6d008c-1426-412b-bf97-cfd51c8cf73e" />
 
-Echo Request al gateway, MAC destino es la del gateway
+Echo Request al gateway, MAC destino es la del gateway 
+
 <img width="663" height="379" alt="image32" src="https://github.com/user-attachments/assets/2dac2cc0-6fef-4883-8322-57f5cb5d7503" />
 
 Cache ARP final
+
 <img width="503" height="168" alt="image15" src="https://github.com/user-attachments/assets/465f4430-a961-4048-9ce6-45b78352e55d" />
 
 
@@ -60,9 +67,11 @@ c) Aparecieron 6 ARP Request Who has 192.168.0.253? Tell 192.168.0.101, enviados
 
 d)
 Terminal, dos ping, el segundo un minuto despues que el primero
+
 <img width="491" height="380" alt="image12" src="https://github.com/user-attachments/assets/9b5995e5-c69c-4a5b-99fb-003967180d09" />
 
 Captura con arp || icmp, el ARP inicial en segundo 4,38s y el segundo ping en el segundo 74,70s
+
 <img width="1366" height="232" alt="image10" src="https://github.com/user-attachments/assets/0cdd2264-1c64-405c-b235-28fed59f27c8" />
 
 
