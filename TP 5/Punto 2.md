@@ -12,22 +12,32 @@ c) La caché ARP es una tabla o memoria temporal IP → MAC que cada host guarda
 Existe para no preguntar antes de cada paquete, ósea, evita que el emisor tenga que enviar una consulta en broadcast a toda la red y también reduce la latencia, ya que permite que los dispositivos se comuniquen de forma instantánea sin perder tiempo en consultas repetitivas de red.
 
 e) 
+
+Terminal, tabla de cache ARP
 <img width="530" height="125" alt="image7" src="https://github.com/user-attachments/assets/5b47fa5e-18ef-4181-9c01-b3dde2239a01" />
 
 Sí, coincide. La caché ARP asocia 192.168.0.1 con c4-e9-84-7c-93-d6, y esa misma MAC es la MAC destino del Echo Request enviado al gateway (frame 3791).
 
-f) 
+f)
+
+Realizamos un ping
 <img width="783" height="221" alt="image39" src="https://github.com/user-attachments/assets/808a22e2-ddbd-42d7-bb95-a550eb0b32ea" />
 
+Wireshark, capturamos ARP
 <img width="821" height="35" alt="image22" src="https://github.com/user-attachments/assets/a3a709e0-3407-4fc4-bb7a-8c05b0fcd61b" />
 
+Detalle del Request, destino broadcast
 <img width="664" height="349" alt="image6" src="https://github.com/user-attachments/assets/a4bc6c22-abba-4e02-97b9-0a3cc35f3a9d" />
 
+Detalle del Reply, respuesta unicast
 <img width="664" height="348" alt="image13" src="https://github.com/user-attachments/assets/ea6d008c-1426-412b-bf97-cfd51c8cf73e" />
 
+Echo Request al gateway, MAC destino es la del gateway
 <img width="663" height="379" alt="image32" src="https://github.com/user-attachments/assets/2dac2cc0-6fef-4883-8322-57f5cb5d7503" />
 
+Cache ARP final
 <img width="503" height="168" alt="image15" src="https://github.com/user-attachments/assets/465f4430-a961-4048-9ce6-45b78352e55d" />
+
 
 
 | Campo | ARP Request | ARP Reply |
@@ -46,4 +56,15 @@ En el Request, Target MAC vale 00:00:00:00:00:00, porque es justamente el dato q
      
 b) El campo Type de Ethernet II vale 0x0806, que identifica al protocolo ARP. No hay encabezado IP: en el panel de Wireshark solo aparecen Frame, Ethernet II y Address Resolution Protocol. Esto indica que ARP "vive" pegado a la capa de enlace: viaja directamente dentro de la trama Ethernet, sin usar IP, por lo que solo funciona dentro de la red local. No puede cruzar un router, porque los routers trabajan con IP y no reenvían broadcasts.   
      
-c) Aparecieron 6 ARP Request (Who has 192.168.0.253? Tell 192.168.0.101), enviados aproximadamente uno por segundo. No hubo ningún Reply, porque no existe ningún equipo con esa IP. No apareció ningún ICMP Echo Request: para enviarlo hay que armar una trama Ethernet con la MAC destino, y como nadie respondió el ARP, esa MAC nunca se obtuvo. Sin MAC destino el paquete IP no se puede encapsular, así que el ping nunca llegó a salir de la computadora y falló con "host de destino inaccesible".  
+c) Aparecieron 6 ARP Request Who has 192.168.0.253? Tell 192.168.0.101, enviados aproximadamente uno por segundo. No hubo ningún Reply, porque no existe ningún equipo con esa IP. Tampoco apareció ningún ICMP Echo Request. Porque para enviarlo hay que armar una trama Ethernet con la MAC destino, y como nadie respondió el ARP, la MAC nunca se obtuvo. Sin MAC destino el paquete IP no se puede encapsular, así que el ping nunca llegó a salir de la computadora y fallo con "Host de destino inaccesible".  
+
+d)
+Terminal, dos ping, el segundo un minuto despues que el primero
+<img width="491" height="380" alt="image12" src="https://github.com/user-attachments/assets/9b5995e5-c69c-4a5b-99fb-003967180d09" />
+
+Captura con arp || icmp, el ARP inicial en segundo 4,38s y el segundo ping en el segundo 74,70s
+<img width="1366" height="232" alt="image10" src="https://github.com/user-attachments/assets/0cdd2264-1c64-405c-b235-28fed59f27c8" />
+
+
+Un minuto después de la primera resolución (ARP Reply en el segundo 4,39 de la captura) volví a hacer ping a 192.168.0.1, en el segundo 74,71 (unos 70 segundos después), y no apareció ningún ARP nuevo para resolver esa dirección: el sistema usó directamente la MAC guardada en la caché, ya que la entrada seguía en la caché (arp -a) con la MAC c4-e9-84-7c-93-d6.
+La ventaja del caché es que evita preguntar por ARP antes de cada paquete, reduciendo el tráfico de broadcast y la demora de cada envío. Pero el problema es que si el equipo cambió de MAC o la IP pasó a otro equipo, la computadora seguiría enviando las tramas a la MAC anterior hasta que la entrada caduque.
