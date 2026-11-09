@@ -1,5 +1,88 @@
 # CODIGO HAMMING (7,4) #
 
+El código Hamming (7,4) es un esquema de codificación lineal de bloques introducido por Richard Hamming que toma bloques de 4 bits de datos y les añade 3 bits de paridad redundantes, generando palabras de código de 7 bits en total. Es un código de corrección hacia adelante (FEC) capaz de detectar hasta 2 errores en un bloque y corregir automáticamente 1 error de bit sin necesidad de retransmisión.
+
+Para facilitar la identificación del bit fallido mediante aritmética binaria, las posiciones de los 7 bits se numeran del 1 al 7. los bits de paridad se sitúan estrictamente en las potencias de base 2 (2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>), mientras que los bits de datos ocupan las posiciones restantes. La palabra de código transmitida tiene la forma:
+
+<div align="center"><img width="300" height="55" alt="image" src="https://github.com/user-attachments/assets/efc48060-4f2a-416d-aaa0-0874b92476be" /></div>
+<div> <br> </div>
+
+Cada bit de paridad pk supervisa a todas aquellas posiciones cuya representación binaria tiene un 1 en la posición correspondiente al peso de pk:
+
+- p1 cubre posiciones con el bit menos significativo en 1 → 1, 3, 5, 7:
+  
+<div align="center"><img width="350" height="34" alt="image" src="https://github.com/user-attachments/assets/eae79bbc-46b1-48a1-bfd2-c5c519b9e93f" /></div>
+
+
+- p2 cubre posiciones con el bit menos significativo en 1 → 2, 3, 6, 7: 
+
+<div align="center"><img width="350" height="34" alt="image" src="https://github.com/user-attachments/assets/06a952b8-0d4e-4b6a-ad55-78dc0cc29063" /></div>
+
+
+- p2 cubre posiciones con el bit menos significativo en 1 → 4, 5, 6, 7:
+
+<div align="center"><img width="350" height="30" alt="image" src="https://github.com/user-attachments/assets/cd3e637c-46f7-4050-ba23-5e4d885f47c5" /></div>
+
+  
+
+Donde <td>&#8853;</td> representa una compuerta XOR.
+<div> <br> </div>
+
+Dado un vector fila de datos d = [d<sub>1</sub>  d<sub>2</sub>  d<sub>3</sub>  d<sub>4</sub>], la palabra de código transmitida *c* se genera mediante
+
+<div align="center"><img width="90" height="34" alt="image" src="https://github.com/user-attachments/assets/a9e5e97b-cee9-4e67-871b-5e8d5a7637ef" /></div>
+<div> <br> </div>
+
+Donde <td>*G* &isin;</td> *GF* (2)<sup>4x7</sup> es la matriz generadora y está dada por:
+
+<div align="center"><img width="344" height="150" alt="image" src="https://github.com/user-attachments/assets/497c7535-e739-4d86-85c7-964383f2e071" /></div>
+<div> <br> </div>
+
+La matriz de comprobación de paridad (H) es de dimensiones 37 y se construye colocando en cada columna la representación binaria de la posición correspondiente
+
+<div align="center"><img width="380" height="150" alt="image" src="https://github.com/user-attachments/assets/a04ebc00-86cd-48a5-bb16-72051539627d" /></div>
+<div> <br> </div>
+
+Por diseño algebraico, cualquier palabra válida c cumple
+
+<div align="center"><img width="103" height="34" alt="image" src="https://github.com/user-attachments/assets/d390edbf-9462-4ee4-962c-7759a476b26f" /></div>
+<div> <br> </div>
+
+Cuando el receptor recibe una palabra r=ce (donde e es el vector de error inducido por el canal), calcula el vector síndrome de 3 bits
+
+<div align="center"><img width="218" height="42" alt="image" src="https://github.com/user-attachments/assets/87ff460c-7488-4395-9bb4-424e49ef251e" /></div>
+<div> <br> </div>
+
+Si no hubo errores detectables en la transmisión, entonces
+
+<div align="center"><img width="117" height="34" alt="image" src="https://github.com/user-attachments/assets/6acb7ee9-e851-4405-ace9-66405706352d" /></div>
+<div> <br> </div>
+
+Pero si
+
+<div align="center"><img width="115" height="38" alt="image" src="https://github.com/user-attachments/assets/6a521eaf-ab62-47cb-9e4c-3744bf9b17e7" /></div>
+<div> <br> </div>
+
+El valor numérico del síndrome interpretado en base 2 indica exactamente el índice del bit alterado, debido a que las columnas de H están ordenadas según el valor binario de su posición.
+
+<div> <br> </div>
+Una vez identificada la posición k, la corrección consiste en invertir el bit en esa posición
+
+
+
+Este método de corrección de errores es superior al de paridad bidimensional ya que posee las siguientes diferenciales
+
+Eficiencia de redundancia y código perfecto: Cumple con igualdad estricta la cota de Hamming
+
+
+Lo que hace que no desperdicie combinaciones del espacio de estados (23=8). Los posibles valores del síndrome se asignan sin redundancia sobrante (1 estado para “sin error” y 7 estados para cada posible posición individual que falla).
+
+Menor sobrecarga (overhead): La tasa de código es R=4/7  57.1% de carga útil neta en bloques de apenas 4 bits, requiriendo únicamente 3 bits de control.
+
+Corrección directa sin ambigüedad geométrica: Procesa cada bloque de 7 bits de manera autónoma, logrando un tiempo de procesamiento determinista en hardware O(1) mediante compuertas XOR en paralelo, sin necesidad de algoritmos de búsqueda o permutaciones de matrices.
+
+Capacidad SEC-DED (Hamming extendido): Añadiendo un único bit de paridad global adicional (Hamming 8,4), la distancia mínima de Hamming pasa de dmin= 3 a dmin = 4. Esto confiere capacidad SEC-DED (Single Error Correction, Double Error Detection), estándar utilizado en hardware de misión crítica y memorias RAM ECC para corregir un bit alterado y alertar sin falsas correcciones si se alteraron dos bits simultáneos.
+
 
 
 
