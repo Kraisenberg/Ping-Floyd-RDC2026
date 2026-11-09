@@ -69,4 +69,56 @@ Vamos a aplicar el código de hamming para el binario del payload (**corregido**
 
   Terminando en una palabra de 7 bits conformada de la siguiente manera:
 
+<table align="center">
+  <tr align="center">
+    <td><b>Posición</b></td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+  </tr>
+  <tr align="center">
+    <td><b>Valor</b></td>
+    <td>p1</td>
+    <td>p2</td>
+    <td>d1</td>
+    <td>p3</td>
+    <td>d2</td>
+    <td>d3</td>
+    <td>d4</td>
+  </tr>
+</table>
+<div> <br> </div>
+Teniendo todo esto en cuenta los nibbles pasan a palabras de 7 bits como se ve a continuación:
+<div> <br> </div>
+<table align="center">
+  <tr align="center"><td>1010101</td><td>1111111</td><td>0111100</td><td>0010110</td><td>1111111</td><td>0111100</td><td>1010101</td></tr>
+  <tr align="center"><td>1101001</td><td>1000011</td><td>0001111</td><td>0011001</td><td>0100101</td><td>0110011</td><td>1101001</td></tr>
+  <tr align="center"><td>1010101</td><td>0110011</td><td>0110011</td><td>0111100</td><td>0101010</td><td>1110000</td><td>1110000</td></tr>
+  <tr align="center"><td>1000011</td><td>1111111</td><td>1111111</td><td>1010101</td><td>0110011</td><td>0001111</td><td>0001111</td></tr>
+  <tr align="center"><td>1011010</td><td>1011010</td><td>1100110</td><td>0001111</td><td>0110011</td><td>1011010</td><td>0011001</td></tr>
+  <tr align="center"><td>0001111</td><td>1111111</td><td>1011010</td><td>1111111</td><td>1010101</td><td>0001111</td><td>1100110</td></tr>
+  <tr align="center"><td>0000000</td><td>1001100</td><td>1111111</td><td>1101001</td><td>0000000</td><td>0100101</td><td>0100101</td></tr>
+  <tr align="center"><td>0010110</td><td>0010110</td><td>0010110</td><td>0001111</td><td>0111100</td><td>0010110</td><td>1001100</td></tr>
+  <tr align="center"><td>1100110</td><td>0110011</td><td>0001111</td><td>1101001</td><td>0101010</td><td>0100101</td><td>0000000</td></tr>
+  <tr align="center"><td>0010110</td><td>1110000</td><td>1011010</td><td>1010101</td><td>0011001</td><td>1101001</td><td>1110000</td></tr>
+  <tr align="center"><td>0011001</td><td>0110011</td><td>1000011</td><td>1111111</td><td>1101001</td><td>0100101</td><td>1101001</td></tr>
+  <tr align="center"><td>0001111</td><td>0101010</td><td>0001111</td><td>1000011</td><td>1111111</td><td>0010110</td><td>0000000</td></tr>
+  <tr align="center"><td>1011010</td><td>1011010</td><td>1111111</td><td>0111100</td><td>0010110</td><td>1111111</td><td>0101010</td></tr>
+  <tr align="center"><td>1111111</td><td>0010110</td><td>0101010</td><td>0110011</td><td>1100110</td><td>1000011</td><td>0000000</td></tr>
+</table>
+
+<div> <br> </div>
+
+* **PASO 3 - Reorganizar la tabla en un unico binario**
+  
+Por último organizamos todas las palabras de 7 bits en orden y terminamos con esta carga útil de 686 bits:
+
+10101011101001101010110000111011010000111100000000010110110011000101100011001000111110110101111111111111110000110110011111111110110101111111100110000101100110011111000001100110101010101101000101100111100000111101100111111111110011010110101111111001011000011111011010100001100011111111111010101000101100011001011110010101010001111111111111010010001111110100101001011111111100001101111000110011111111101001010101010011001101100111010101000000001111000101010101010111010011111111001011011001100111100011001111100000001111101101000011110100101001011001001010011001010010100101101111111100001110101011101001111000000011110011001110011001001011001100000000011100001101001000000001010100000000
+
+
+**Acá tenemos una nueva carga útil codificada con Hamming (7,4)**
 
