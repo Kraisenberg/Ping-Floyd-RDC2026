@@ -30,7 +30,7 @@ Donde <td>&#8853;</td> representa una compuerta XOR.
 
 Dado un vector fila de datos d = [d<sub>1</sub>  d<sub>2</sub>  d<sub>3</sub>  d<sub>4</sub>], la palabra de código transmitida *c* se genera mediante
 
-<div align="center"><img width="90" height="34" alt="image" src="https://github.com/user-attachments/assets/a9e5e97b-cee9-4e67-871b-5e8d5a7637ef" /></div>
+<div align="center"><img width="119" height="45" alt="image" src="https://github.com/user-attachments/assets/a9e5e97b-cee9-4e67-871b-5e8d5a7637ef" /></div>
 <div> <br> </div>
 
 Donde <td>*G* &isin;</td> *GF* (2)<sup>4x7</sup> es la matriz generadora y está dada por:
@@ -45,22 +45,22 @@ La matriz de comprobación de paridad (H) es de dimensiones 37 y se construye co
 
 Por diseño algebraico, cualquier palabra válida c cumple
 
-<div align="center"><img width="103" height="34" alt="image" src="https://github.com/user-attachments/assets/d390edbf-9462-4ee4-962c-7759a476b26f" /></div>
+<div align="center"><img width="136" height="45" alt="image" src="https://github.com/user-attachments/assets/d390edbf-9462-4ee4-962c-7759a476b26f" /></div>
 <div> <br> </div>
 
 Cuando el receptor recibe una palabra r=ce (donde e es el vector de error inducido por el canal), calcula el vector síndrome de 3 bits
 
-<div align="center"><img width="218" height="42" alt="image" src="https://github.com/user-attachments/assets/87ff460c-7488-4395-9bb4-424e49ef251e" /></div>
+<div align="center"><img width="234" height="45" alt="image" src="https://github.com/user-attachments/assets/87ff460c-7488-4395-9bb4-424e49ef251e" /></div>
 <div> <br> </div>
 
 Si no hubo errores detectables en la transmisión, entonces
 
-<div align="center"><img width="117" height="34" alt="image" src="https://github.com/user-attachments/assets/6acb7ee9-e851-4405-ace9-66405706352d" /></div>
+<div align="center"><img width="155" height="45" alt="image" src="https://github.com/user-attachments/assets/6acb7ee9-e851-4405-ace9-66405706352d" /></div>
 <div> <br> </div>
 
 Pero si
 
-<div align="center"><img width="115" height="38" alt="image" src="https://github.com/user-attachments/assets/6a521eaf-ab62-47cb-9e4c-3744bf9b17e7" /></div>
+<div align="center"><img width="136" height="45" alt="image" src="https://github.com/user-attachments/assets/6a521eaf-ab62-47cb-9e4c-3744bf9b17e7" /></div>
 <div> <br> </div>
 
 El valor numérico del síndrome interpretado en base 2 indica exactamente el índice del bit alterado, debido a que las columnas de H están ordenadas según el valor binario de su posición.
@@ -68,20 +68,30 @@ El valor numérico del síndrome interpretado en base 2 indica exactamente el í
 <div> <br> </div>
 Una vez identificada la posición k, la corrección consiste en invertir el bit en esa posición
 
+<div> <br> </div>
+<div align="center"><img width="167" height="45" alt="image" src="https://github.com/user-attachments/assets/65280e24-db52-490f-beb7-88f2cc96bbf4" /></div>
+<div> <br> </div>
 
 
 Este método de corrección de errores es superior al de paridad bidimensional ya que posee las siguientes diferenciales
 
-Eficiencia de redundancia y código perfecto: Cumple con igualdad estricta la cota de Hamming
+<div> <br> </div>
+<ul>
+  <li>
+    Eficiencia de redundancia y código perfecto: Cumple con igualdad estricta la cota de Hamming
+    <br><br>
+    <div align="center"><img width="535" height="80" alt="image" src="https://github.com/user-attachments/assets/d2064c12-ee85-43db-848c-de499e13df6e" /></div>
+    <br><br>
+    Lo que hace que no desperdicie combinaciones del espacio de estados (2<sup>3</sup>=8). Los posibles valores del síndrome se asignan sin redundancia sobrante (1 estado para “sin error” y 7 estados para cada posible posición individual que falla).
+  </li>
+</ul>
+  
 
+- Menor sobrecarga (overhead): La tasa de código es R=4/7 <td>&#8776;</td>  57.1% de carga útil neta en bloques de apenas 4 bits, requiriendo únicamente 3 bits de control.
 
-Lo que hace que no desperdicie combinaciones del espacio de estados (23=8). Los posibles valores del síndrome se asignan sin redundancia sobrante (1 estado para “sin error” y 7 estados para cada posible posición individual que falla).
+- Corrección directa sin ambigüedad geométrica: Procesa cada bloque de 7 bits de manera autónoma, logrando un tiempo de procesamiento determinista en hardware O(1) mediante compuertas XOR en paralelo, sin necesidad de algoritmos de búsqueda o permutaciones de matrices.
 
-Menor sobrecarga (overhead): La tasa de código es R=4/7  57.1% de carga útil neta en bloques de apenas 4 bits, requiriendo únicamente 3 bits de control.
-
-Corrección directa sin ambigüedad geométrica: Procesa cada bloque de 7 bits de manera autónoma, logrando un tiempo de procesamiento determinista en hardware O(1) mediante compuertas XOR en paralelo, sin necesidad de algoritmos de búsqueda o permutaciones de matrices.
-
-Capacidad SEC-DED (Hamming extendido): Añadiendo un único bit de paridad global adicional (Hamming 8,4), la distancia mínima de Hamming pasa de dmin= 3 a dmin = 4. Esto confiere capacidad SEC-DED (Single Error Correction, Double Error Detection), estándar utilizado en hardware de misión crítica y memorias RAM ECC para corregir un bit alterado y alertar sin falsas correcciones si se alteraron dos bits simultáneos.
+- Capacidad SEC-DED (Hamming extendido): Añadiendo un único bit de paridad global adicional (Hamming 8,4), la distancia mínima de Hamming pasa de d<sub>min</sub>= 3 a d<sub>min</sub> = 4. Esto confiere capacidad SEC-DED (Single Error Correction, Double Error Detection), estándar utilizado en hardware de misión crítica y memorias RAM ECC para corregir un bit alterado y alertar sin falsas correcciones si se alteraron dos bits simultáneos.
 
 
 
@@ -93,7 +103,10 @@ Capacidad SEC-DED (Hamming extendido): Añadiendo un único bit de paridad globa
 
 ## Aplicacion de Codigo Hamming ##
 
+<div> <br> </div>
+
 **Aplicaremos el codigo Hamming para el payload del mensaje del primer premio**
+
 <div> <br> </div>
 
 
